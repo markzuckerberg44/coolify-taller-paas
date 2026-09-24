@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Frontend desplegado con Coolify Self-Hosted para el Taller 1 de PaaS." />
+    <title>Coolify Lab · Taller PaaS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio">Coolify Lab</a>
+      <nav aria-label="Navegación principal">
+        <a href="#proyecto">Proyecto</a>
+        <a class="nav-action" href="#arquitectura">Arquitectura</a>
+      </nav>
+      <a class="header-link" href="#footer">Acerca de</a>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">Una idea, desplegada<br />en tu propia <span class="underlined">nube.</span></h1>
+        <p>Un frontend sencillo publicado desde una infraestructura propia con Ubuntu Server, Docker y Coolify.</p>
+
+        <div class="landscape" aria-hidden="true">
+          <svg viewBox="0 0 1440 520" role="img">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M0 258c93-12 151-3 222 9 69 12 137 15 216 2 101-16 171-8 260 4 105 14 179 13 268-3 109-20 235-20 474 8" />
+              <path d="M0 294c111-10 201 0 293 17 85 16 168 14 253-3 95-19 185-20 284 1 102 22 213 23 326 2 103-19 183-18 284 2" />
+              <path d="M84 267v-44h95v52m-72-52v-24h42v24m83 63v-81h120v74m-86-74v-38h46v38" />
+              <path d="M412 274v-118h211v119m-181-119v-37h151v37m-116-37V93h81v26" />
+              <path d="M452 190h131m-131 28h131m-131 28h131M477 168v98m27-98v98m27-98v98m27-98v98" />
+              <path d="M731 277v-58h113v66m-88-66v-32h62v32m123 68v-92h147v92m-111-92v-41h75v41" />
+              <path d="M1162 298v-66h98v72m-70-72v-30h42v30m74 78v-44h80v51" />
+              <path d="M0 362c72-36 139-46 209-29 56 13 93 46 145 55 75 13 134-36 209-33 57 2 99 34 154 43 87 14 144-38 226-32 55 4 101 34 153 38 87 6 151-49 244-43 35 3 65 12 100 29" />
+              <path d="M0 422c75-21 145-16 220 14 73 29 134 29 204 4 99-35 173-37 274 0 97 35 175 36 273 5 111-35 215-32 313 4 55 20 103 26 156 18" />
+              <path d="M0 488c125-42 224-35 334 0m211 0c119-45 225-44 350 0m194 0c125-51 231-42 351 0" />
+              <path class="route" d="M709 520c-67-45-67-87 0-126 57-33 69-68 35-106" />
+              <path class="route" d="M735 520c-59-43-57-78 6-115 51-30 60-67 28-118" />
+              <circle cx="745" cy="270" r="7" />
+              <path d="M755 263c25-31 55-46 92-43m-6-10 9 10-11 7" />
+            </g>
+          </svg>
+          <p>Coolify administra el recorrido desde el código hasta el contenedor.</p>
+        </div>
+      </section>
+
+      <section class="project" id="proyecto" aria-labelledby="project-title">
+        <div><h2 id="project-title">Infraestructura simple, resultado visible.</h2></div>
+        <div class="project-copy">
+          <p>Esta aplicación se ejecuta dentro de una máquina virtual ARM64. Coolify construye la imagen, inicia el contenedor y conecta el servicio con su proxy inverso.</p>
+          <dl>
+            <div><dt>Sistema</dt><dd>Ubuntu Server 22.04 LTS</dd></div>
+            <div><dt>Plataforma</dt><dd>Coolify Self-Hosted</dd></div>
+            <div><dt>Ejecución</dt><dd>Docker + Nginx</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="architecture" id="arquitectura" aria-labelledby="architecture-title">
+        <h2 id="architecture-title">Cómo llega esta página hasta ti.</h2>
+        <ol>
+          <li><span>Tu navegador</span><small>Solicita la aplicación</small></li>
+          <li><span>Cloudflare Tunnel</span><small>Transporta la conexión</small></li>
+          <li><span>Coolify + Traefik</span><small>Dirige la solicitud</small></li>
+          <li><span>Contenedor Nginx</span><small>Entrega el frontend</small></li>
+        </ol>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <strong>Julián Honores · Manuel Jerez</strong>
+      <span>Cloud Computing</span>
+      <span>2026</span>
+    </footer>
+  </body>
+</html>
